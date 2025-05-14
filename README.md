@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PURITY PIPE PROJECT
 
-## Getting Started
+# 💧 Water Purifier Monitoring System  
 
-First, run the development server:
+## 📖 Overview  
+The **Water Purifier Monitoring System** is a web-based platform designed to track the status of water purifiers in real time. The system alerts users via SMS when their purifier has faults or requires servicing. It includes an intuitive dashboard, user authentication, and a backend powered by **Firebase (for authentication) and MongoDB (for data storage)**.  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎯 Key Features  
+✅ **Real-time monitoring** of purifier status  
+✅ **SMS notifications** for faults and servicing reminders  
+✅ **Secure authentication** via email, password, and phone number (Firebase)  
+✅ **Admin dashboard** to manage users and purifiers  
+✅ **Database storage** using MongoDB  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ System Architecture  
+The system consists of three main components:  
+1. **Frontend** - Built with Next.js and Tailwind CSS for a seamless UI/UX.  
+2. **Backend** - Firebase for authentication and SMS notifications, MongoDB for data storage.  
+3. **Notification System** - Sends SMS alerts for purifier issues and servicing.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📑 Pages  
 
-To learn more about Next.js, take a look at the following resources:
+### 1️⃣ Authentication Pages  
+- **Sign Up Page**  
+  - Users can sign up using **email & password** or **phone number (OTP verification via Firebase)**.  
+- **Login Page**  
+  - Users can log in using their credentials.  
+- **Forgot Password Page**  
+  - Users can reset their password via email.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2️⃣ Dashboard (Authenticated Users Only)  
+- **Overview Page**  
+  - Displays the current status of the user's purifier.  
+  - Shows upcoming servicing dates and alerts.  
+- **Purifier Details Page**  
+  - Displays a detailed log of past faults, servicing, and performance metrics.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### 3️⃣ Admin Pages  
+- **Admin Dashboard**  
+  - View all purifiers and their status.  
+  - Manage users and their assigned purifiers.  
+- **SMS Logs Page**  
+  - View a history of all sent SMS notifications.  
+- **User Management Page**  
+  - Add, edit, or remove users.  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔔 Notification System  
+- Users receive SMS notifications when:  
+  - Their purifier has a fault.  
+  - A scheduled servicing is due.  
+- Admins can configure SMS templates and view sent logs.  
+
+---
+
+## 🛠️ Tech Stack  
+| Component       | Technology |  
+|----------------|------------|  
+| Frontend       | Next.js, Tailwind CSS , Typescript |  
+| Backend        | Firebase Authentication, (SMS API) |  
+| Database       | MongoDB |  
+| State Management | (To be decided) |  
+
+---
+
+
+## 📌 Conclusion  
+This system ensures **clean water and peace of mind** for users by keeping them informed about their purifier’s status. With real-time monitoring, automatic SMS notifications, and an admin dashboard, it streamlines purifier maintenance and improves efficiency. 🚀  
+
+---
+
+
+## 📌 UI/UX
+- [ ] As a user, I want a clean and intuitive interface so that I can easily navigate the system.
+- [ ] As a user, I want a dashboard that displays the purifier's status in real time.
+- [ ] As a user, I want to receive clear notifications when my purifier needs servicing or has faults.
+- [ ] As an admin, I want a mobile-responsive UI to monitor purifiers from any device.
+
+## 🔐 Authentication
+### Email & Password Authentication
+- [ ] As a user, I want to sign up using my email and password to access my account.
+- [ ] As a user, I want to log in using my email and password.
+- [ ] As a user, I want to reset my password via email if I forget it.
+- [ ] As an admin, I want to manage users and reset their passwords if needed.
+
+### Phone Number Authentication (Firebase)
+- [ ] As a user, I want to sign up using my phone number for added convenience.
+- [ ] As a user, I want to receive an OTP via SMS to verify my phone number.
+- [ ] As a user, I want to log in using my phone number after verification.
+
+## 🛠️ Purifier Monitoring
+- [ ] As a user, I want to see my purifier's status in real time.
+- [ ] As a user, I want to receive alerts when my purifier has a fault.
+- [ ] As a user, I want to be notified when my purifier needs servicing.
+- [ ] As an admin, I want to view the status of all connected purifiers.
+- [ ] As an admin, I want to update purifier status manually if necessary.
+
+## 📲 SMS Notifications
+- [ ] As a user, I want to receive an SMS notification when my purifier has an issue.
+- [ ] As a user, I want to receive an SMS reminder when my purifier needs servicing.
+- [ ] As an admin, I want to customize the SMS notification templates.
+- [ ] As an admin, I want to see a log of all SMS notifications sent.
+
+## 🛢️ Database (MongoDB)
+- [ ] As a  system technician, I want to store user data securely in MongoDB.
+- [ ] As a  system technician, I want to store purifier status and history in MongoDB.
+- [ ] As a  system technician, I want to log all SMS notifications in MongoDB.
+- [ ] As a  system technician, I want to allow admins to update purifier data if needed.
+
+## ⚙️ System Settings & Permissions
+- [ ] As an admin, I want to manage user roles (e.g., user, technician, admin).
+- [ ] As an admin, I want to set service intervals for each purifier.
+- [ ] As an admin, I want to manually trigger SMS notifications if needed.
+
+## 📊 Reports & Analytics
+- [ ] As a user, I want to view a history of my purifier's service records.
+- [ ] As an admin, I want to generate reports on purifier faults and maintenance.
+- [ ] As an admin, I want to track the number of SMS notifications sent per month.
+
+---
+
