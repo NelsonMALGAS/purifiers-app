@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "InventoryIQ | Home",
-  description: "Transform the way you track and manage your inventory with InventoryIQ — smart, efficient, and always at your fingertips."
-}
+  title: "AquaSync | Home",
+  description:
+    "Welcome to AquaSync — your smart purifier management system. Monitor purifier health, track user activity, and ensure clean water, anytime and anywhere.",
+};
+
 
 const Home = () => {
   return (

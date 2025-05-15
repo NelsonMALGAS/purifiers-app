@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: "InventoryIQ | Dashboard",
+    title: "AquaSync | Dashboard",
     description:
-        "Access your InventoryIQ dashboard to manage stock items, track inventory levels, and monitor expiry dates in real time. Stay organized with a clean, responsive interface that adapts to light and dark themes.",
-}
+        "Access your AquaSync dashboard to manage purifier data, track performance, and monitor water quality—all in a responsive, theme-adaptive interface.",
+};
+
 
 const DashboardPage = () => {
     return (
-        <div>DashboardPage</div>
+        <section>DashboardPage</section>
     )
 }
 

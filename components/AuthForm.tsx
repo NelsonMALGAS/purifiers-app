@@ -132,15 +132,38 @@ const AuthForm = ({ label, mode, welcomeSubtitle, welcomeTitle }: AuthFormProps)
             {/* Left Side - Welcome */}
             <div className="hidden md:flex w-1/2 flex-col justify-center items-center bg-muted text-muted-foreground p-10 text-center rounded-r-3xl shadow-md dark:bg-muted/40">
                 <Image
-                    src="/vercel.svg"
+                    src="/logo.png"
                     alt="App Logo"
                     className="w-24 h-24 mb-6 rounded-2xl shadow-sm"
                     width={96}
                     height={96}
                 />
+
                 <h1 className="text-3xl font-bold text-foreground mb-2">{welcomeTitle}</h1>
-                <p className="text-sm">{welcomeSubtitle}</p>
+                <p className="text-sm mb-2">{welcomeSubtitle}</p>
+
+                {/* Tagline */}
+                <p className="text-md font-bold capitalize italic text-muted-foreground mb-4">
+                    Clean water, smart management.
+                </p>
+
+                {/* App Description */}
+                <p className="text-sm text-muted-foreground max-w-md mb-4">
+                    AquaSync helps you monitor, maintain, and manage your water purifiers effortlessly.
+                    Designed for both individual owners and administrators, it ensures optimal performance and timely maintenance.
+                </p>
+
+                {/* Key Features List */}
+                <ul className="text-sm text-muted-foreground mt-2 space-y-2 text-left max-w-sm">
+                    <li>✅ Real-time purifier monitoring</li>
+                    <li>✅ Filter usage tracking & alerts</li>
+                    <li>✅ Centralized inventory management</li>
+                    <li>✅ Role-based dashboards for admins and owners</li>
+                    <li>✅ Smart maintenance scheduling</li>
+                </ul>
             </div>
+
+
 
             {/* Right Side - Form */}
             <div className="w-full md:w-1/2 flex items-center justify-center px-6 py-12 bg-background">

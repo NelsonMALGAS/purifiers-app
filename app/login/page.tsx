@@ -3,18 +3,21 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: "InventoryIQ | Login",
-    description: " Log in to your InventoryIQ account to access your dashboard and features"
-}
+    title: "AquaSync | Login",
+    description:
+        "Log in to your AquaSync account to access your purifier dashboard, view usage statistics, and manage your water systems securely.",
+};
+
 
 const LoginPage = () => {
     return (
         <AuthForm
             mode="login"
             welcomeTitle="Welcome Back 👋"
-            welcomeSubtitle="Manage your stock smarter, not harder."
+            welcomeSubtitle="Access your water purifier dashboard — monitor status, view logs, and keep everything running smoothly."
             label="Sign In"
         />
+
     )
 }
 
