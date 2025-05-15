@@ -37,3 +37,26 @@ export const authErrorMessages: AuthMessages = {
     description: "Something went wrong while trying to sign out.",
   },
 };
+
+export const links = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Dashboard",
+    path: "/dashboard",
+  },
+  {
+    name: "Purifier",
+    path: "/purifiers/123",
+  },
+  {
+    name: "Login",
+    path: "/login",
+  },
+  {
+    name: "Sign Up",
+    path: "/sign-up",
+  },
+];

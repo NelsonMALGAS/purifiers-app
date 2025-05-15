@@ -149,7 +149,7 @@ const AuthForm = ({ label, mode, welcomeSubtitle, welcomeTitle }: AuthFormProps)
 
                 {/* App Description */}
                 <p className="text-sm text-muted-foreground max-w-md mb-4">
-                    AquaSync helps you monitor, maintain, and manage your water purifiers effortlessly.
+                    💧AquaSync helps you monitor, maintain, and manage your water purifiers effortlessly.
                     Designed for both individual owners and administrators, it ensures optimal performance and timely maintenance.
                 </p>
 

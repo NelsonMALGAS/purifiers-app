@@ -61,7 +61,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="container mx-auto mt-16 p-8">{children}</main>
+          <main className="container mx-auto p-8">{children}</main>
           <Toaster position="top-right" />
         </ThemeProvider>
       </body>

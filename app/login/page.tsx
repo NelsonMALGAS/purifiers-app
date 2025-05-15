@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: "AquaSync | Login",
+    title: "💧AquaSync | Login",
     description:
         "Log in to your AquaSync account to access your purifier dashboard, view usage statistics, and manage your water systems securely.",
 };
