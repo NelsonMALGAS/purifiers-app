@@ -13,11 +13,26 @@ const poppins = Poppins({
 });
 
 
-
 export const metadata: Metadata = {
-  title: "💧 Water Purifier Monitoring System",
-  description: "A project that will send notifications to your phone",
-  keywords: ["purity pipe", "notifications", "phone", "water", "purifier", "monitoring"],
+  title: "💧AquaSync",
+  description:
+    "AquaSync is a smart water purifier management system that helps you monitor usage, receive maintenance alerts, and manage inventory — all in real time from your phone or desktop.",
+  keywords: [
+    "AquaSync",
+    "water purifier",
+    "purifier monitoring",
+    "smart water system",
+    "filter alerts",
+    "maintenance notifications",
+    "real-time monitoring",
+    "IoT water purifier",
+    "clean water",
+    "inventory tracking",
+    "purity pipe",
+    "water quality",
+    "remote control",
+    "mobile notifications"
+  ],
   authors: [
     {
       name: "Nelson Zongezile Malgas",
@@ -26,8 +41,8 @@ export const metadata: Metadata = {
       name: "Keamogetswe Kgakatsi"
     }
   ],
-
 };
+
 
 export default function RootLayout({
   children,
