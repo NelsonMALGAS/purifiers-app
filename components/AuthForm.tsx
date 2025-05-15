@@ -79,7 +79,7 @@ const AuthForm = ({ label, mode, welcomeSubtitle, welcomeTitle }: AuthFormProps)
                     showToastMessage({ type: "success", ...authSuccessMessages.signup });
                     router.push("/")
                 } else {
-                    throw new Error(result.error || "Unknown signup error");
+                    console.error(result.error || "Unknown signup error");
                 }
             } else if (mode === "login") {
                 result = await handleLogin(email, password);
@@ -87,7 +87,7 @@ const AuthForm = ({ label, mode, welcomeSubtitle, welcomeTitle }: AuthFormProps)
                     showToastMessage({ type: "success", ...authSuccessMessages.login });
                     router.push("/")
                 } else {
-                    throw new Error(result.error || "Unknown login error");
+                    console.error(result.error || "Unknown login error");
                 }
             }
         } catch (err) {
