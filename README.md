@@ -82,10 +82,10 @@ This system ensures **clean water and peace of mind** for users by keeping them 
 
 ## 🔐 Authentication
 ### Email & Password Authentication
-- [ ] As a user, I want to sign up using my email and password to access my account.
-- [ ] As a user, I want to log in using my email and password.
-- [ ] As a user, I want to reset my password via email if I forget it.
-- [ ] As an admin, I want to manage users and reset their passwords if needed.
+- [x] As a user, I want to sign up using my email and password to access my account.
+- [x] As a user, I want to log in using my email and password.
+- [x] As a user, I want to reset my password via email if I forget it.
+- [x] As an admin, I want to manage users and reset their passwords if needed.
 
 ### Phone Number Authentication (Firebase)
 - [ ] As a user, I want to sign up using my phone number for added convenience.
