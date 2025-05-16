@@ -1,9 +1,7 @@
-# PURITY PIPE PROJECT
-
-# 💧 Water Purifier Monitoring System  
+# 💧AquaSync 
 
 ## 📖 Overview  
-The **Water Purifier Monitoring System** is a web-based platform designed to track the status of water purifiers in real time. The system alerts users via SMS when their purifier has faults or requires servicing. It includes an intuitive dashboard, user authentication, and a backend powered by **Firebase (for authentication) and MongoDB (for data storage)**.  
+AquaSync is a smart water purifier management system that helps you monitor usage, receive maintenance alerts, and manage inventory — all in real time from your phone or desktop.  
 
 ## 🎯 Key Features  
 ✅ **Real-time monitoring** of purifier status  
