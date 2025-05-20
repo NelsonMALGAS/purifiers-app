@@ -37,7 +37,7 @@ const LandingPage = () => {
     }
 
     return (
-        <main className="px-4 md:px-8 lg:px-16 py-4 space-y-4">
+        <main className="px-4 md:px-8 lg:px-16 py-2 space-y-4">
             {/* Hero */}
             <section className="flex flex-col-reverse lg:flex-row items-center gap-10 text-center lg:text-left">
                 <div className="flex-1 space-y-6">

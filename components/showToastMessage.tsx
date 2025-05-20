@@ -1,3 +1,4 @@
+import { CheckCircle, XCircle } from "lucide-react";
 import { toast } from "sonner";
 
 interface ShowToastMessageProps {
@@ -15,6 +16,7 @@ const showToastMessage = ({
         toast(message, {
             description: description,
             duration: 3000,
+            icon: <CheckCircle className="text-green-500" size={20} color="green" />,
             style: {
                 backgroundColor: "#A7F3D0",
                 color: "#064E3B",
@@ -29,6 +31,7 @@ const showToastMessage = ({
         toast(message, {
             description: description,
             duration: 3000,
+            icon: <XCircle size={20} className="" color="#B91C1C" />,
             style: {
                 backgroundColor: "#FECACA",
                 color: "#7F1D1D",

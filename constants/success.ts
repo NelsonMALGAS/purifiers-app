@@ -48,10 +48,6 @@ export const links = [
     path: "/dashboard",
   },
   {
-    name: "Purifier",
-    path: "/purifiers/123",
-  },
-  {
     name: "Login",
     path: "/login",
   },

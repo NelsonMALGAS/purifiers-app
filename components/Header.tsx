@@ -8,9 +8,27 @@ import MobileNav from "./MobileNav";
 import Image from "next/image";
 import { motion } from "framer-motion"
 import { Separator } from "./ui/separator";
-import { LogOut } from "lucide-react";
+import { LoaderCircle, LogOut } from "lucide-react";
+import useAuth from "@/hooks/useAuth";
+import showToastMessage from "./showToastMessage";
+import { authSuccessMessages, authErrorMessages } from "@/constants/success";
 
 const Header = () => {
+
+    const { handleSignOut, loading } = useAuth()
+
+    const signOut = async () => {
+        try {
+            const result = await handleSignOut()
+            if (result?.success) {
+                showToastMessage({ type: "success", ...authSuccessMessages.signout })
+            } else {
+                showToastMessage({ type: "error", ...authErrorMessages.signout })
+            }
+        } catch (error) {
+            console.error("Something went wrong while signing out")
+        }
+    }
     return (
         <motion.header
             initial={{ x: "100%", opacity: 0 }}
@@ -35,11 +53,11 @@ const Header = () => {
                 {/* {desktop nav} */}
                 <div className="hidden xl:flex items-center gap-8">
                     <Navbar />
-                    <Link href="/contact">
-                        <Button variant="destructive" className="bg-red-500">
-                            <LogOut />
-                        </Button>
-                    </Link>
+
+                    <Button variant="destructive" className="bg-red-500" onClick={signOut} disabled={loading}>
+                        {loading ? (<LoaderCircle className="w-4 h-4 animate-spin" />) : <LogOut />}
+                    </Button>
+
                     <ModeToggle />
                 </div>
 
