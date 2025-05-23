@@ -6,10 +6,11 @@ import { CiMenuFries } from "react-icons/ci";
 import { links } from "@/constants/success";
 import Image from "next/image";
 import { ModeToggle } from "./ui/mode-toggle";
+import useAuth from "@/hooks/useAuth";
 
 const MobileNav = () => {
     const pathname = usePathname();
-
+    const { currentUser, loading } = useAuth()
     return (
         <Sheet>
             <SheetTrigger className="flex justify-center items-center">
@@ -51,6 +52,15 @@ const MobileNav = () => {
                             {link.name}
                         </Link>
                     ))}
+                    {!loading && !currentUser && (
+                        <>
+                            <Link href="/login" className={`${"/login" === pathname && "text-primary border-b-2 border-primary"} capitalize font-medium hover:text-primary transition-all`}>
+                                Login
+                            </Link>
+                            <Link href="/sign-up" className={`${"/sign-up" === pathname && "text-primary border-b-2 border-primary"} capitalize font-medium hover:text-primary transition-all`}>
+                                Register
+                            </Link>
+                        </>)}
                 </nav>
             </SheetContent>
         </Sheet>

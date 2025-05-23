@@ -3,10 +3,11 @@
 import { links } from "@/constants/success";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import useAuth from "@/hooks/useAuth";
 
 const Navbar = () => {
     const pathname = usePathname();
+    const { currentUser, loading } = useAuth()
 
     return (
         <nav className="container mx-auto flex gap-8">
@@ -17,6 +18,17 @@ const Navbar = () => {
                     </Link>
                 );
             })}
+
+            {!loading && !currentUser && (
+                <>
+                    <Link href="/login" className={`${"/login" === pathname && "text-primary border-b-2 border-primary"} capitalize font-medium hover:text-primary transition-all`}>
+                        Login
+                    </Link>
+                    <Link href="/sign-up" className={`${"/sign-up" === pathname && "text-primary border-b-2 border-primary"} capitalize font-medium hover:text-primary transition-all`}>
+                        Register
+                    </Link>
+                </>)}
+
         </nav>
     );
 };

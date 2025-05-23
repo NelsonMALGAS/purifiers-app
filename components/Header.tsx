@@ -15,7 +15,7 @@ import { authSuccessMessages, authErrorMessages } from "@/constants/success";
 
 const Header = () => {
 
-    const { handleSignOut, loading } = useAuth()
+    const { handleSignOut, loading, currentUser } = useAuth()
 
     const signOut = async () => {
         try {
@@ -33,7 +33,7 @@ const Header = () => {
         <motion.header
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="py-8 xl:py-12 text-foreground px-4"
         >
 
@@ -54,9 +54,10 @@ const Header = () => {
                 <div className="hidden xl:flex items-center gap-8">
                     <Navbar />
 
-                    <Button variant="destructive" className="bg-red-500" onClick={signOut} disabled={loading}>
-                        {loading ? (<LoaderCircle className="w-4 h-4 animate-spin" />) : <LogOut />}
-                    </Button>
+                    {!loading && currentUser && (
+                        <Button variant="destructive" className="bg-red-500" onClick={signOut} disabled={loading}>
+                            {loading ? (<LoaderCircle className="w-4 h-4 animate-spin" />) : <LogOut />}
+                        </Button>)}
 
                     <ModeToggle />
                 </div>

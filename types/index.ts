@@ -1,18 +1,6 @@
 import { User } from "firebase/auth";
 import { ObjectId } from "mongodb";
 
-export interface StockItem {
-  _id?: ObjectId | undefined;
-  name: string;
-  price: number;
-  quantity: number;
-  description: string;
-  userId: string;
-  createdAt: Date;
-  updatedAt: Date;
-  expiryDate: Date;
-}
-
 interface AuthMessage {
   message: string;
   description: string;
@@ -54,4 +42,19 @@ export type AuthErrors = {
   email?: string;
   password?: string;
   confirmPassword?: string;
+};
+
+export type Purifier = {
+  _id?: ObjectId;
+  userId: string;
+  userName: string;
+  title: string;
+  model: string;
+  purifierData: {
+    serviceDate: Date;
+    installationDate: Date;
+    lastFilterChangeDate?: Date;
+    location: string;
+    notes?: string;
+  };
 };

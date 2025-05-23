@@ -47,12 +47,4 @@ export const links = [
     name: "Dashboard",
     path: "/dashboard",
   },
-  {
-    name: "Login",
-    path: "/login",
-  },
-  {
-    name: "Sign Up",
-    path: "/sign-up",
-  },
 ];
