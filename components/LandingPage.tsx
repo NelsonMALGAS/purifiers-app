@@ -42,7 +42,7 @@ const LandingPage = () => {
             <section className="flex flex-col-reverse lg:flex-row items-center gap-10 text-center lg:text-left">
                 <div className="flex-1 space-y-6">
                     <h1 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight">
-                        Welcome to <span className="text-primary">AquaSync</span>
+                        Welcome to <span className="text-primary">Aqua</span>Sync
                     </h1>
                     <p className="text-muted-foreground text-lg">
                         Keep your water purification systems monitored and maintained—smart, simple, and synced.
@@ -55,6 +55,9 @@ const LandingPage = () => {
                                 </Link>
                                 <Link href="/profile">
                                     <Button variant="outline" className="w-full sm:w-auto">Your Profile</Button>
+                                </Link>
+                                <Link href={`/purifiers/${currentUser?.uid}`}>
+                                    <Button variant="secondary" className="w-full sm:w-auto">Your Purifiers</Button>
                                 </Link>
                             </>
                         ) : (
@@ -103,7 +106,7 @@ const LandingPage = () => {
             {/* User Info */}
             {currentUser && (
                 <section className="space-y-4 text-center">
-                    <h2 className="text-2xl font-bold">Welcome Back, {currentUser.email} 👋</h2>
+                    <h2 className="text-2xl font-bold">Welcome Back, {currentUser.displayName || currentUser.email} 👋</h2>
                     <div className="flex items-center justify-center gap-3 flex-wrap">
                         <p className="text-muted-foreground">
                             <span className="font-semibold mr-2">Last Login:</span>

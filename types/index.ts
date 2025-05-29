@@ -11,6 +11,7 @@ export interface AuthMessages {
   signup: AuthMessage;
   reset: AuthMessage;
   signout: AuthMessage;
+  profileUpdate: AuthMessage;
 }
 
 /**

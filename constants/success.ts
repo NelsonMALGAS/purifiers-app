@@ -17,6 +17,10 @@ export const authSuccessMessages: AuthMessages = {
     message: "Signed Out",
     description: "You have been signed out of your account.",
   },
+  profileUpdate: {
+    message: "Profile Updated",
+    description: "Your profile information has been updated successfully.",
+  },
 };
 
 export const authErrorMessages: AuthMessages = {
@@ -35,6 +39,10 @@ export const authErrorMessages: AuthMessages = {
   signout: {
     message: "Sign Out Failed",
     description: "Something went wrong while trying to sign out.",
+  },
+  profileUpdate: {
+    message: "Profile Update Failed",
+    description: "Something went wrong while trying to update your profile.",
   },
 };
 

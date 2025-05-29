@@ -12,6 +12,7 @@ import { LoaderCircle, LogOut } from "lucide-react";
 import useAuth from "@/hooks/useAuth";
 import showToastMessage from "./showToastMessage";
 import { authSuccessMessages, authErrorMessages } from "@/constants/success";
+import ProfileDropdown from "./ProfileDropdown";
 
 const Header = () => {
 
@@ -55,10 +56,22 @@ const Header = () => {
                     <Navbar />
 
                     {!loading && currentUser && (
-                        <Button variant="destructive" className="bg-red-500" onClick={signOut} disabled={loading}>
-                            {loading ? (<LoaderCircle className="w-4 h-4 animate-spin" />) : <LogOut />}
-                        </Button>)}
-
+                        <>
+                            <Button
+                                variant="destructive"
+                                className="bg-red-500"
+                                onClick={signOut}
+                                disabled={loading}
+                            >
+                                {loading ? (
+                                    <LoaderCircle className="w-4 h-4 animate-spin" />
+                                ) : (
+                                    <LogOut />
+                                )}
+                            </Button>
+                            <ProfileDropdown />
+                        </>
+                    )}
                     <ModeToggle />
                 </div>
 
