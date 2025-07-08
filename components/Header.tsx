@@ -27,7 +27,7 @@ const Header = () => {
                 showToastMessage({ type: "error", ...authErrorMessages.signout })
             }
         } catch (error) {
-            console.error("Something went wrong while signing out")
+            console.error("Something went wrong while signing out", error)
         }
     }
     return (

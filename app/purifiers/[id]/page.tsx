@@ -2,17 +2,18 @@ import { Purifier } from "@/types";
 import Link from "next/link";
 import { Metadata } from "next";
 
+
+
 interface PageProps {
-    params: {
-        id: Promise<string>;
-    };
+    params: Promise<{ id: string }>
 }
 
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { id } = await params;
+    const { id } = await (params);
 
     try {
-        const res = await fetch(`http://localhost:3001/api/purifiers?uid=${id}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/purifiers?uid=${id}`);
         const purifiers = await res.json();
 
         if (!purifiers.length) {
@@ -36,9 +37,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 const PurifierPage = async ({ params }: PageProps) => {
-    const { id } = await params;
+    const { id } = await (params);
 
-    const res = await fetch(`http://localhost:3001/api/purifiers?uid=${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/purifiers?uid=${id}`, {
         cache: "no-store"
     });
 
@@ -48,7 +49,7 @@ const PurifierPage = async ({ params }: PageProps) => {
                 <div className="bg-background border border-muted rounded-2xl shadow-md p-8 max-w-md text-center">
                     <h1 className="text-2xl font-bold text-foreground mb-3">No Purifier Found</h1>
                     <p className="text-muted-foreground mb-6">
-                        It looks like you haven't registered a purifier yet. Register now to get started.
+                        It looks like you haven&apos;t registered a purifier yet. Register now to get started.
                     </p>
                     <Link
                         href="/purifiers/register"
