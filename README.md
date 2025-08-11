@@ -122,5 +122,10 @@ This system ensures **clean water and peace of mind** for users by keeping them 
 - [ ] As an admin, I want to generate reports on purifier faults and maintenance.
 - [ ] As an admin, I want to track the number of SMS notifications sent per month.
 
+
+## 🚧 Project Status  
+AquaSync is currently an **ongoing project** under active development. While core authentication and dashboard functionalities are in place, features such as **real-time purifier monitoring, SMS notifications, and advanced admin tools** are still being implemented. The system will continue to evolve with regular updates, improved UI/UX, and expanded capabilities to ensure a robust and seamless user experience.
+
+
 ---
 
